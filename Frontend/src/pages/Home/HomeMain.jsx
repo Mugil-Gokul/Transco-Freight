@@ -6,7 +6,11 @@ import HomeRequest from './HomeRequest'
 import HomeAboutUs from './HomeAboutUs'
 import ContactUsForm from '../../Components/ContactUsForm'
 import RequestAQuote from './RequestAQuote'
-import QuoteTitleSection from '../../Components/QuoteTitleSection'
+import HomeServices from './HomeServices'
+import HomeCareers from './HomeCareers'
+import HomeFleetAndEquipment from './HomeFleetAndEquipment'
+import HomeTestimonial from './HomeTestimonial'
+import HomeBlogAndNews from './HomeBlogAndNews'
 
 const HomeMain = () => {
   return (
@@ -16,7 +20,12 @@ const HomeMain = () => {
     <HomeInsights/>
     <HomeRequest/>
     <HomeAboutUs/>
-    <QuoteTitleSection/>
+    <HomeServices/>
+    <HomeCareers/>
+    <HomeFleetAndEquipment/>
+    <HomeTestimonial/>
+    <HomeBlogAndNews/>
+
     <RequestAQuote/>
     <ContactUsForm/>
     </>

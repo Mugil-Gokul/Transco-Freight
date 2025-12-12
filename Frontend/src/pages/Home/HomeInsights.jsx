@@ -14,7 +14,7 @@ const HomeInsights = () => {
   return (
     <section className="w-full bg-white py-16 ">
       {/* Big black heading */}
-      <h2 className="text-4xl md:text-6xl font-bold text-black text-center mb-16 tracking-tight">
+      <h2 className="text-4xl md:text-5xl font-bold text-black text-center mb-16 tracking-tight">
         INSIGHTS
       </h2>
 

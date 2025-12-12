@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import LayeredTitle from '../../Components/LayeredTitle'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -8,19 +9,10 @@ const fadeUp = {
 
 const RequestAQuote = () => {
   return (
-    <section className="w-full bg-white px-6 md:px-12 py-20">
-      {/* Section Title */}
-      {/* <motion.h2
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeUp}
-        transition={{ duration: 0.6 }}
-        className="text-4xl md:text-5xl font-extrabold text-black text-center mb-12"
-      >
-        REQUEST A QUOTE
-      </motion.h2> */}
-      
+    <section className="w-full bg-white px-6 md:px-12 py-10">
+      {/* Title Section */}
+      <LayeredTitle title="REQUEST A QUOTE" />
+
       {/* Quote Form */}
       <motion.form
         variants={fadeUp}

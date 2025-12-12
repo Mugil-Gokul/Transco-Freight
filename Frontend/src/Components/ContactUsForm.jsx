@@ -9,9 +9,9 @@ const fadeUp = {
 
 const ContactUsForm = () => {
   return (
-    <section className="w-full bg-white px-6 md:px-12 py-20">
+    <section className="w-full bg-white py-20">
       {/* Banner Section */}
-      <div className="relative w-full h-[300px] overflow-hidden mb-20 rounded-2xl">
+      <div className="relative w-full h-[200px] overflow-hidden mb-20 ">
         <motion.img
           src={BannerImg}
           alt="Contact Banner"

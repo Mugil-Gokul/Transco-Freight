@@ -24,7 +24,7 @@ const fadeUp = {
 
 const HomeAboutUs = () => {
   return (
-    <section className="w-full bg-white py-20">
+    <section className="w-full bg-white py-10">
       {/* Banner Section */}
       <div className="relative w-full h-[300px] overflow-hidden mb-20">
         {/* Banner Image */}
