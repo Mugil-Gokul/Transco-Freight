@@ -10,7 +10,7 @@ const LayeredTitle = ({
 }) => {
   return (
     <section
-      className={`relative w-full flex items-center justify-center bg-white overflow-hidden`}
+      className={`relative w-full flex items-center justify-center overflow-hidden`}
       style={{ height: sectionHeight }}
     >
       {/* Background Text */}
