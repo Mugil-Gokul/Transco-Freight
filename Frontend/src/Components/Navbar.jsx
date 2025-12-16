@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
 
-const navLinks = ["About", "Services", "Careers", "Fleet", "Blog", "Contact"];
+const navLinks = [
+  { name: "About", path: "/about" },
+  { name: "Services", path: "/services" },
+  { name: "Careers", path: "/careers" },
+  { name: "Fleet", path: "/fleet" },
+  { name: "Blog", path: "/blogs" },
+  { name: "Contact", path: "/contact" },
+];
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -13,7 +21,6 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Variants for staggered animations
   const navVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: (i) => ({
@@ -27,40 +34,46 @@ const Navbar = () => {
     <header className="w-full bg-white overflow-hidden">
       {/* ⭐ TRUE STICKY WRAPPER */}
       <div className="fixed z-50 bg-white shadow-md w-full">
-        {/* TOP NAV BAR */}
         <div className="max-w-7xl mx-auto px-12 py-3 grid grid-cols-3 items-center">
-          {/* LEFT LOGO SPACE */}
+          {/* LEFT LOGO */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="h-14 flex items-center"
           >
-            <motion.img
-              src={Logo}
-              alt="Logo"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: scrolled ? 1 : 0, scale: 0.55 }}
-              transition={{ duration: 0.6 }}
-              className="h-full w-auto object-contain"
-            />
+            <Link to="/">
+              <motion.img
+                src={Logo}
+                alt="Logo"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: scrolled ? 1 : 0, scale: 0.55 }}
+                transition={{ duration: 0.6 }}
+                className="h-full w-auto object-contain"
+              />
+            </Link>
           </motion.div>
 
           {/* NAV LINKS */}
           <nav className="flex justify-center space-x-6 text-[#18357b] font-medium">
             {navLinks.map((link, i) => (
-              <motion.a
-                key={link}
-                href={`#${link.toLowerCase()}`}
+              <motion.div
+                key={link.name}
                 custom={i}
                 variants={navVariants}
                 initial="hidden"
                 animate="visible"
-                whileHover={{ scale: 1.05, color: "#1D4ED8" }}
-                className="hover:text-blue-700"
+                whileHover={{ scale: 1.05 }}
               >
-                {link}
-              </motion.a>
+                <Link
+                  to={link.path}
+                  className="relative group transition-colors duration-200"
+                >
+                  <span className="group-hover:text-red-600">{link.name}</span>
+                  {/* underline effect */}
+                  <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+                </Link>
+              </motion.div>
             ))}
           </nav>
 
@@ -85,9 +98,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* ----------------------------------------------- */}
-      {/* BOTTOM SECTION (Moves behind but no layout shift) */}
-      {/* ----------------------------------------------- */}
+      {/* BOTTOM SECTION */}
       <div className="relative z-10 bg-white pt-[80px] border-b">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
