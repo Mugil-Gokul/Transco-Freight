@@ -30,12 +30,12 @@ const fleetData = [
 
 const DiourFleet = () => {
   return (
-    <section className="bg-white py-16 px-6 md:px-12 lg:px-24">
+    <section className="bg-white py-10 sm:py-14 md:py-16 px-4 sm:px-6 md:px-12 lg:px-24">
       <motion.h2
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-12"
+        className="text-2xl sm:text-3xl md:text-5xl font-bold text-center text-gray-800 mb-8 sm:mb-12"
       >
         The Diour Fleet
       </motion.h2>
@@ -46,13 +46,13 @@ const DiourFleet = () => {
         transition={{ duration: 0.8 }}
         className="overflow-x-auto"
       >
-        <table className="min-w-full border border-gray-300 rounded-lg overflow-hidden">
+        <table className="min-w-full border border-gray-300 rounded-lg overflow-hidden text-sm sm:text-base">
           <thead className="bg-gray-100 text-gray-700">
             <tr>
-              <th className="px-6 py-4 text-left font-semibold">Vehicle</th>
-              <th className="px-6 py-4 text-left font-semibold">Capacity</th>
-              <th className="px-6 py-4 text-left font-semibold">Best Use</th>
-              <th className="px-6 py-4 text-left font-semibold">Specialty Features</th>
+              <th className="px-3 sm:px-6 py-3 sm:py-4 text-left font-semibold">Vehicle</th>
+              <th className="px-3 sm:px-6 py-3 sm:py-4 text-left font-semibold">Capacity</th>
+              <th className="px-3 sm:px-6 py-3 sm:py-4 text-left font-semibold">Best Use</th>
+              <th className="px-3 sm:px-6 py-3 sm:py-4 text-left font-semibold">Specialty Features</th>
             </tr>
           </thead>
           <tbody className="text-gray-800">
@@ -64,10 +64,10 @@ const DiourFleet = () => {
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 className="border-t border-gray-200"
               >
-                <td className="px-6 py-4">{item.vehicle}</td>
-                <td className="px-6 py-4">{item.capacity}</td>
-                <td className="px-6 py-4">{item.bestUse}</td>
-                <td className="px-6 py-4">{item.features}</td>
+                <td className="px-3 sm:px-6 py-3 sm:py-4">{item.vehicle}</td>
+                <td className="px-3 sm:px-6 py-3 sm:py-4">{item.capacity}</td>
+                <td className="px-3 sm:px-6 py-3 sm:py-4">{item.bestUse}</td>
+                <td className="px-3 sm:px-6 py-3 sm:py-4">{item.features}</td>
               </motion.tr>
             ))}
           </tbody>

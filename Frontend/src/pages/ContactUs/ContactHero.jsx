@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 const ContactHero = () => {
   return (
-    <div className="relative w-full h-[300px] overflow-hidden mb-20 rounded-b-[150px]">
+    <div className="relative w-full h-[300px] overflow-hidden mb-20 md:rounded-b-[150px]">
         {/* Banner Image */}
         <motion.img
           src={ContactImg}
@@ -24,7 +24,7 @@ const ContactHero = () => {
           transition={{ duration: 0.6 }}
           className="absolute top-0 left-0 w-full h-full flex items-start justify-center pt-12"
         >
-          <h2 className="text-white text-4xl md:text-5xl font-bold bg-black/60 px-8 py-4 rounded-md uppercase">
+          <h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-bold bg-black/60 px-8 py-4 rounded-md uppercase">
             Contact US
           </h2>
         </motion.div>

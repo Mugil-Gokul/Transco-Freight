@@ -3,8 +3,9 @@ import { motion } from "framer-motion";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import Sprinter from "../../assets/SprinterVans.png";
 import StraightTrucks from "../../assets/FullFreight.png";
-import BoxTruck from "../../assets/BoxTruck.png";
+import Trailers from "../../assets//Truck1.jpg";
 import FlatBedTruck from "../../assets/Truck2.jpg";
+import BrokerageServices from "../../assets/Operations.png";
 
 const services = [
   {
@@ -14,19 +15,24 @@ const services = [
   },
   {
     title: "STRAIGHT TRUCKS",
-    description: "20–26' trucks",
+    description: "20’–26’ trucks, versatile freight handling.",
     image: StraightTrucks,
   },
   {
-    title: "BOX TRUCKS",
-    description: "Ideal for medium loads and regional transport.",
-    image: BoxTruck,
+    title: "53’ Trailers",
+    description: "LTL, TL, Expedited, Dedicated services.",
+    image: Trailers,
   },
   {
-    title: "FLATBED TRUCKS",
-    description: "Perfect for oversized or irregular cargo.",
+    title: "Logistics as a Service",
+    description: "End-to-end supply chain solutions.",
     image: FlatBedTruck,
   },
+  {
+    title: "Brokerage Services",
+    description: "Connecting shippers to carriers.",
+    image: BrokerageServices,
+  }
 ];
 
 const HomeServices = () => {

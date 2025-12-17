@@ -26,7 +26,8 @@ const HomeCareers = () => {
           className="flex justify-center"
         >
           <CustomButton className="sm:w-auto">
-            Open Positions (TruckRight)
+            <a href="https://truckrighthr.truckright.com/careers" target='_blank'>Open Positions (TruckRight)</a>
+            
           </CustomButton>
         </motion.div>
       </motion.div>

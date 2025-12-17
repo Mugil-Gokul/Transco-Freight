@@ -1,16 +1,23 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import heroImage from '../../assets/ServiceHeroImg.png' 
+import { useNavigate } from 'react-router-dom'
+import heroImage from '../../assets/ServiceHeroImg.png'
 import CustomButton from '../../Components/CustomButton'
 
 const ServicesHero = () => {
+  const navigate = useNavigate()
+
+  const handleRequestQuote = () => {
+    navigate('/#request-form')
+  }
+
   return (
     <div className="relative w-full h-[80vh] bg-gray-900 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="TRANSCO Truck"
+          alt="Transco Truck"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50" />
@@ -22,7 +29,7 @@ const ServicesHero = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="text-3xl md:text-5xl font-bold max-w-3xl leading-tight"
+          className="text-2xl sm:text-3xl md:text-5xl font-bold max-w-3xl leading-tight"
         >
           Reliable Transportation & Logistics Services
         </motion.h1>
@@ -31,11 +38,12 @@ const ServicesHero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.8, ease: 'easeOut' }}
-          className="mt-4 text-lg md:text-xl max-w-xl"
+          className="mt-4 text-md sm:text-lg md:text-xl max-w-xl"
         >
           From city deliveries to nationwide freight, we handle it all.
         </motion.p>
-        <CustomButton className='mt-8'>
+
+        <CustomButton onClick={handleRequestQuote} className="mt-8">
           Request a Quote
         </CustomButton>
       </div>

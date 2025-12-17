@@ -1,16 +1,23 @@
 import React from "react";
 import { motion } from "framer-motion";
-import heroImage from "../../assets/Multiple.png"; 
+import heroImage from "../../assets/Multiple.png";
 import CustomButton from "../../Components/CustomButton";
+import { useNavigate } from "react-router-dom";
 
 const FleetHero = () => {
+  const navigate = useNavigate();
+
+  const handleRequestQuote = () => {
+    navigate("/#request-form");
+  };
+
   return (
     <div className="relative w-full h-[80vh] bg-gray-900 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
-          alt="TRANSCO Truck"
+          alt="Transco Truck"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50" />
@@ -21,8 +28,8 @@ const FleetHero = () => {
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="text-3xl md:text-5xl font-bold max-w-3xl leading-tight"
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-2xl sm:text-3xl md:text-5xl font-bold max-w-3xl leading-tight"
         >
           Fleets
         </motion.h1>
@@ -36,7 +43,9 @@ const FleetHero = () => {
           From small vans to full trailers, we have the right vehicle for every
           shipment.
         </motion.p>
-        <CustomButton className="mt-8">Request a Quote</CustomButton>
+        <CustomButton onClick={handleRequestQuote} className="mt-8">
+          Request a Quote
+        </CustomButton>
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 import Logo from "../assets/logo.png";
+import CustomButton from "./CustomButton";
 
 const navLinks = [
   { name: "About", path: "/about" },
@@ -31,6 +32,16 @@ const Navbar = () => {
       transition: { delay: i * 0.15, duration: 0.6, ease: "easeOut" },
     }),
   };
+
+  const handleScroll = () => {
+    const section = document.getElementById('request-form')
+    if (section) {
+      section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+  }
 
   return (
     <header className="w-full bg-white overflow-hidden">
@@ -86,16 +97,9 @@ const Navbar = () => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
             className="hidden md:flex justify-end"
           >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              className="bg-red-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-red-700"
-            >
+            <CustomButton onClick={handleScroll}>
               Request a Quote
-            </motion.button>
+            </CustomButton>
           </motion.div>
 
           {/* MOBILE MENU BUTTON (right aligned when flex) */}
@@ -123,14 +127,14 @@ const Navbar = () => {
                 key={link.name}
                 to={link.path}
                 onClick={() => setMenuOpen(false)}
-                className="block text-[#18357b] font-medium hover:text-red-600"
+                className="block text-[#18357b] font-medium hover:text-red-600 text-center md:text-none"
               >
                 {link.name}
               </Link>
             ))}
-            <button className="w-full bg-red-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-red-700">
+            <CustomButton className=" flex items-center mx-auto" onClick={handleScroll}>
               Request a Quote
-            </button>
+            </CustomButton>
           </motion.div>
         )}
       </div>

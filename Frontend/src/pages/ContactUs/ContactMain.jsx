@@ -12,7 +12,7 @@ const ContactMain = () => {
       </div>
 
       {/* Form Section Overlapping Hero */}
-      <div className="relative z-10 -mt-32 md:-mt-40 lg:-mt-48 px-6 md:px-12 lg:px-24">
+      <div className="relative z-10 -mt-40 md:-mt-40 lg:-mt-48 px-6 md:px-12 lg:px-24">
         <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-xl py-12 px-6 md:px-10 lg:px-16">
           <ContactForm />
         </div>

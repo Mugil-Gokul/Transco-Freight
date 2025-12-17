@@ -10,71 +10,88 @@ import {
 const benefits = [
   {
     icon: FaMapMarkedAlt,
-    label: 'Nationwide Coverage'
+    title: 'Nationwide Reach',
+    stat: 'Many States',
+    description: 'Reliable coverage across major trade lanes and metro hubs.'
   },
   {
     icon: FaHeadset,
-    label: '24/7 Customer Support'
+    title: 'Always Available',
+    stat: '24/7',
+    description: 'Dedicated support teams monitoring shipments round the clock.'
   },
   {
     icon: FaRoute,
-    label: 'Real-Time Tracking'
+    title: 'Live Visibility',
+    stat: 'Real-Time',
+    description: 'GPS tracking with proactive alerts and route optimization.'
   },
   {
     icon: FaDollarSign,
-    label: 'Competitive Pricing'
+    title: 'Cost Efficient',
+    stat: 'Optimized',
+    description: 'Data-driven pricing that reduces logistics overhead.'
   }
 ]
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.2,
-      duration: 0.6,
-      ease: 'easeOut'
-    }
-  })
-}
-
 const WhyWorkWithUs = () => {
   return (
-    <section className="relative bg-gradient-to-br from-gray-100 to-white py-20 px-6 md:px-20 overflow-hidden">
-      {/* Decorative Background */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 w-40 h-40 bg-red-100 rounded-full blur-3xl opacity-30 animate-pulse" />
-        <div className="absolute bottom-0 right-0 w-60 h-60 bg-red-200 rounded-full blur-3xl opacity-20 animate-pulse" />
-      </div>
+    <section className="relative py-24 px-4 sm:px-8 md:px-20 bg-white overflow-hidden">
+      
+      {/* Subtle grid background */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:60px_60px] opacity-20" />
 
-      <motion.h2
-        initial={{ opacity: 0, y: 30 }}
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16 relative z-10"
+        className="relative z-10 max-w-4xl mx-auto text-center mb-20"
       >
-        Why Work With Us?
-      </motion.h2>
+        <p className="uppercase tracking-widest text-sm text-red-600 mb-4">
+          Our Advantage
+        </p>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
+          Why Work With Us
+        </h2>
+      </motion.div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 relative z-10">
-        {benefits.map((benefit, index) => {
-          const Icon = benefit.icon
+      {/* Timeline */}
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-4 gap-10">
+        {benefits.map((item, index) => {
+          const Icon = item.icon
           return (
             <motion.div
               key={index}
-              custom={index}
-              initial="hidden"
-              whileInView="visible"
-              variants={cardVariants}
-              className="group bg-white/80 backdrop-blur-md border border-gray-200 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 text-center hover:-translate-y-1"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
+              className="relative text-center px-6"
             >
-              <div className="flex justify-center mb-6">
-                <Icon className="text-red-600 text-5xl transition-colors duration-300 group-hover:text-[#18357b]" />
+              {/* Connector line */}
+              {index !== benefits.length + 1 && (
+                <span className="hidden md:block absolute top-12 right-0 w-full h-[2px] bg-gray-200" />
+              )}
+
+              {/* Icon */}
+              <div className="relative z-10 mx-auto w-20 h-20 rounded-full bg-[#18357b] text-white flex items-center justify-center text-3xl shadow-lg mb-6">
+                <Icon />
               </div>
-              <h3 className="text-lg font-semibold text-gray-800 group-hover:text-red-600 transition-colors">
-                {benefit.label}
+
+              {/* Stat */}
+              <p className="text-red-600 font-semibold tracking-wide mb-1">
+                {item.stat}
+              </p>
+
+              {/* Title */}
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                {item.title}
               </h3>
+
+              {/* Description */}
+              <p className="text-gray-600 leading-relaxed">
+                {item.description}
+              </p>
             </motion.div>
           )
         })}

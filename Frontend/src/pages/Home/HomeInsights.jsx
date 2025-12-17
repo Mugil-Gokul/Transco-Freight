@@ -5,9 +5,9 @@ import FleetImg from '../../assets/Multiple.png'
 import CommunicationImg from '../../assets/Sunset.png'
 
 const insights = [
-  { title: 'REAL-TIME TRACKING', caption: '', image: TrackingImg },
+  { title: 'REAL-TIME TRACKING', caption: 'Know where your shipment is, anytime.', image: TrackingImg },
   { title: 'VERSATILE FLEET', caption: 'From vans to trailers, we handle all load sizes.', image: FleetImg },
-  { title: 'PRO ACTIVE COMMUNICATION', caption: '', image: CommunicationImg },
+  { title: 'PRO ACTIVE COMMUNICATION', caption: 'We keep you informed at every step.', image: CommunicationImg },
 ]
 
 const HomeInsights = () => {

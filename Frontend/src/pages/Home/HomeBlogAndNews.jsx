@@ -1,22 +1,21 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { FaRegCalendarAlt } from 'react-icons/fa'
-
-import Article1 from '../../assets/Truck1.jpg'
-import Article2 from '../../assets/Truck2.jpg'
+// import Article1 from '../../assets/Truck1.jpg'
+// import Article2 from '../../assets/Truck2.jpg'
 
 const articles = [
   {
     category: 'Supply Chain & Warehousing',
     title: 'Navigating Regulatory Challenges in Developing Industrial Infrastructure in India',
     date: '20 June 2025',
-    image: Article1,
+    image: "../../assets/Truck1.jpg",
   },
   {
     category: 'Supply Chain & Warehousing',
     title: 'The Future of Last-Mile Logistics',
     date: '05 June 2025',
-    image: Article2,
+    image: "../../assets/Truck2.jpg",
   },
 ]
 

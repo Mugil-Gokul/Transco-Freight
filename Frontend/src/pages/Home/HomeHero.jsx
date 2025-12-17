@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import HeroImg from '../../assets/HomeHero.png' 
 import CustomButton from '../../Components/CustomButton'
+import { Link } from 'react-router-dom'
 
 const HomeHero = () => {
   const ref = useRef(null)
@@ -66,7 +67,7 @@ const HomeHero = () => {
           viewport={{ once: true }}
         >
           <CustomButton className="px-6 py-3 text-sm sm:text-base md:text-lg">
-            Get to Know Us
+            <Link to="/about">Get to Know Us</Link>
           </CustomButton>
         </motion.div>
       </motion.div>
