@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
-import Logo from "../assets/logo.png";
+import Logo from "../assets/Logo.png";
 import CustomButton from "./CustomButton";
 
 const navLinks = [
