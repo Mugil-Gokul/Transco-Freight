@@ -10,19 +10,19 @@ import {
 } from 'react-icons/fa'
 
 const services = [
-  {
-    icon: FaTruckPickup,
-    title: 'Sprinter Vans',
-    description: '1–4 pallets, agile for city deliveries.'
-  },
-  {
-    icon: FaTruckMoving,
-    title: 'Straight Trucks',
-    description: '20′–26′ trucks, versatile freight handling.'
-  },
+  // {
+  //   icon: FaTruckPickup,
+  //   title: 'Sprinter Vans',
+  //   description: '1–4 pallets, agile for city deliveries.'
+  // },
+  // {
+  //   icon: FaTruckMoving,
+  //   title: 'Straight Trucks',
+  //   description: '20′–26′ trucks, versatile freight handling.'
+  // },
   {
     icon: FaTrailer,
-    title: '58′ Trailers',
+    title: '53′ Trailers',
     description: 'LTL, TL, Expedited, Dedicated services.'
   },
   {
@@ -60,7 +60,7 @@ const OurCoreServices = () => {
         Our Core Services
       </motion.h2>
 
-      <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
         {services.map((service, index) => {
           const Icon = service.icon
           return (

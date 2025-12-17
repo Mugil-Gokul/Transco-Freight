@@ -97,8 +97,11 @@ const Navbar = () => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
             className="hidden md:flex justify-end"
           >
-            <CustomButton onClick={handleScroll}>
-              Request a Quote
+            {/* onClick={handleScroll} */}
+            <CustomButton>
+              <Link to="/contact">
+                Request a Quote
+              </Link>
             </CustomButton>
           </motion.div>
 

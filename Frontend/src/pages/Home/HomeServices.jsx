@@ -8,16 +8,16 @@ import FlatBedTruck from "../../assets/Truck2.jpg";
 import BrokerageServices from "../../assets/Operations.png";
 
 const services = [
-  {
-    title: "SPRINTER VANS",
-    description: "1–4 pallets, agile for city deliveries.",
-    image: Sprinter,
-  },
-  {
-    title: "STRAIGHT TRUCKS",
-    description: "20’–26’ trucks, versatile freight handling.",
-    image: StraightTrucks,
-  },
+  // {
+  //   title: "SPRINTER VANS",
+  //   description: "1–4 pallets, agile for city deliveries.",
+  //   image: Sprinter,
+  // },
+  // {
+  //   title: "STRAIGHT TRUCKS",
+  //   description: "20’–26’ trucks, versatile freight handling.",
+  //   image: StraightTrucks,
+  // },
   {
     title: "53’ Trailers",
     description: "LTL, TL, Expedited, Dedicated services.",

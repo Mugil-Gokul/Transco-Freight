@@ -9,20 +9,20 @@ import {
 import CustomButton from '../../Components/CustomButton'
 
 const fleet = [
-  {
-    id: 'sprinter',
-    icon: FaTruckPickup,
-    title: 'Sprinter Vans',
-    capacity: '1–4 pallets',
-    details: 'Best for city deliveries. Compact, agile, and efficient for urban logistics.'
-  },
-  {
-    id: 'straight',
-    icon: FaTruckMoving,
-    title: 'Straight Trucks',
-    capacity: '12–14 pallets',
-    details: 'Versatile for mid-sized loads. Ideal for regional freight and flexible routing.'
-  },
+  // {
+  //   id: 'sprinter',
+  //   icon: FaTruckPickup,
+  //   title: 'Sprinter Vans',
+  //   capacity: '1–4 pallets',
+  //   details: 'Best for city deliveries. Compact, agile, and efficient for urban logistics.'
+  // },
+  // {
+  //   id: 'straight',
+  //   icon: FaTruckMoving,
+  //   title: 'Straight Trucks',
+  //   capacity: '12–14 pallets',
+  //   details: 'Versatile for mid-sized loads. Ideal for regional freight and flexible routing.'
+  // },
   {
     id: 'trailer',
     icon: FaTrailer,

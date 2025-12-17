@@ -6,16 +6,16 @@ import Trailer53 from '../../assets/Truck1.jpg'
 import Specialty from '../../assets/Operations.png'
 
 const fleetData = [
-  {
-    title: 'Sprinter Van',
-    description: 'Capacity: 1–4 pallets',
-    image: Sprinter,
-  },
-  {
-    title: 'Straight Truck',
-    description: 'Capacity: 12–14 pallets',
-    image: StraightTruck,
-  },
+  // {
+  //   title: 'Sprinter Van',
+  //   description: 'Capacity: 1–4 pallets',
+  //   image: Sprinter,
+  // },
+  // {
+  //   title: 'Straight Truck',
+  //   description: 'Capacity: 12–14 pallets',
+  //   image: StraightTruck,
+  // },
   {
     title: '53’ Trailer',
     description: 'Full truckload capabilities',
@@ -49,7 +49,7 @@ const HomeFleetAndEquipment = () => {
       </motion.h2>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-10 max-w-7xl mx-auto">
         {fleetData.map((item, index) => (
           <motion.div
             key={item.title}

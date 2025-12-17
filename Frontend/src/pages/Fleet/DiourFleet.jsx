@@ -2,18 +2,18 @@ import React from 'react'
 import { motion } from 'framer-motion'
 
 const fleetData = [
-  {
-    vehicle: 'Sprinter Van',
-    capacity: '1–4 pallets',
-    bestUse: 'Best for',
-    features: 'Edge-competure',
-  },
-  {
-    vehicle: 'Straight Truck',
-    capacity: '12–14 pallets',
-    bestUse: 'Regional deliveries',
-    features: 'Eco-friendly',
-  },
+  // {
+  //   vehicle: 'Sprinter Van',
+  //   capacity: '1–4 pallets',
+  //   bestUse: 'Best for',
+  //   features: 'Edge-competure',
+  // },
+  // {
+  //   vehicle: 'Straight Truck',
+  //   capacity: '12–14 pallets',
+  //   bestUse: 'Regional deliveries',
+  //   features: 'Eco-friendly',
+  // },
   {
     vehicle: '53’ Trailer',
     capacity: 'Full truckload',

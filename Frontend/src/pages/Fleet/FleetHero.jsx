@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import heroImage from "../../assets/Multiple.png";
 import CustomButton from "../../Components/CustomButton";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const FleetHero = () => {
   const navigate = useNavigate();
@@ -43,8 +43,11 @@ const FleetHero = () => {
           From small vans to full trailers, we have the right vehicle for every
           shipment.
         </motion.p>
-        <CustomButton onClick={handleRequestQuote} className="mt-8">
+        {/* <CustomButton onClick={handleRequestQuote} className="mt-8">
           Request a Quote
+        </CustomButton> */}
+        <CustomButton className="mt-8">
+          <Link to="/contact">Request a Quote</Link>
         </CustomButton>
       </div>
     </div>

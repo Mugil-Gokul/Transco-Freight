@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import CustomButton from '../../Components/CustomButton'
+import { Link } from 'react-router-dom'
 
 const HomeRequest = () => {
 
@@ -33,9 +34,12 @@ const HomeRequest = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="flex justify-center"
         >
-          <CustomButton onClick={handleScroll}>
-            Request a Quote
-          </CustomButton>
+          {/* onClick={handleScroll} */}
+            <CustomButton>
+              <Link to="/contact">
+                Request a Quote
+              </Link>
+            </CustomButton>
         </motion.div>
       </motion.div>
     </section>
