@@ -12,18 +12,18 @@ const insights = [
 
 const HomeInsights = () => {
   return (
-    <section className="w-full bg-white py-16 ">
+    <section className="w-full bg-white py-10 sm:py-16">
       {/* Big black heading */}
-      <h2 className="text-4xl md:text-5xl font-bold text-black text-center mb-16 tracking-tight">
+      <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-black text-center mb-8 sm:mb-16 tracking-tight px-4">
         INSIGHTS
       </h2>
 
-      {/* Tight rectangular stack */}
-      <div className="grid md:grid-cols-3 gap-0">
+      {/* Responsive grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto">
         {insights.map((item, index) => (
           <motion.div
             key={index}
-            className="relative group overflow-hidden "
+            className="relative group overflow-hidden rounded-md shadow-md"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -33,20 +33,22 @@ const HomeInsights = () => {
             <img
               src={item.image}
               alt={item.title}
-              className="w-full h-[300px] object-cover"
+              className="w-full h-[200px] sm:h-[250px] md:h-[300px] object-cover"
             />
 
             {/* Title always visible below image */}
-            <div className="bg-white py-4 text-center border border-gray-200">
-              <h3 className="text-lg font-bold text-[#18357b]">{item.title}</h3>
+            <div className="bg-white py-3 sm:py-4 text-center border border-gray-200">
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#18357b]">
+                {item.title}
+              </h3>
             </div>
 
-            {/* Hover overlay driven by group-hover (reliable) */}
+            {/* Hover overlay */}
             <div
               className="pointer-events-none absolute inset-0 translate-y-[-100%] group-hover:translate-y-0 transition-transform duration-500 ease-in-out bg-black/80 flex items-center justify-center text-center px-4"
             >
               {item.caption && (
-                <p className="opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-150 text-white text-lg leading-relaxed">
+                <p className="opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 delay-150 text-white text-sm sm:text-base md:text-lg leading-relaxed">
                   {item.caption}
                 </p>
               )}

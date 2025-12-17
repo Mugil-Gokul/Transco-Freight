@@ -1,5 +1,5 @@
 import React from 'react'
-import ContactImg from "../../assets/Operations.png"
+import ContactImg from "../../assets/ContactImg.png"
 import { motion } from 'framer-motion'
 
 const ContactHero = () => {

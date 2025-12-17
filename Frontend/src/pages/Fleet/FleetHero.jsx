@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import heroImage from "../../assets/HomeHero.png"; // Adjust path as needed
+import heroImage from "../../assets/Multiple.png"; 
 import CustomButton from "../../Components/CustomButton";
 
 const FleetHero = () => {

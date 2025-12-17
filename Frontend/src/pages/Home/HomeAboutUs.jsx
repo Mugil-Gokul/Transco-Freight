@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import WarehouseImg from '../../assets/Operations.png' // Replace with actual image path
+import WarehouseImg from '../../assets/Operations.png'
 
 const infoCards = [
   {
@@ -24,10 +24,9 @@ const fadeUp = {
 
 const HomeAboutUs = () => {
   return (
-    <section className="w-full bg-white py-10">
+    <section className="w-full bg-white py-10 sm:py-16">
       {/* Banner Section */}
-      <div className="relative w-full h-[300px] overflow-hidden mb-20">
-        {/* Banner Image */}
+      <div className="relative w-full h-[200px] sm:h-[200px] md:h-[300px] overflow-hidden mb-12 sm:mb-20">
         <motion.img
           src={WarehouseImg}
           alt="About Us Banner"
@@ -44,16 +43,16 @@ const HomeAboutUs = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="absolute top-0 left-0 w-full h-full flex items-start justify-center pt-12"
+          className="absolute top-0 left-0 w-full h-full flex items-center justify-center"
         >
-          <h2 className="text-white text-4xl md:text-5xl font-bold bg-black/60 px-8 py-4 rounded-md">
+          <h2 className="text-white text-2xl sm:text-4xl md:text-5xl font-bold bg-black/60 px-6 sm:px-8 py-3 sm:py-4 rounded-md text-center">
             ABOUT US
           </h2>
         </motion.div>
       </div>
 
       {/* Info Cards */}
-      <div className="grid md:grid-cols-3 gap-8 px-6 md:px-12 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto">
         {infoCards.map((card, index) => (
           <motion.div
             key={index}
@@ -62,10 +61,10 @@ const HomeAboutUs = () => {
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
-            className="bg-[#18357b] text-white p-6 rounded-md shadow-lg h-[350px]"
+            className="bg-[#18357b] text-white p-5 sm:p-6 rounded-md shadow-lg min-h-[220px] sm:min-h-[280px] md:min-h-[350px] flex flex-col"
           >
-            <h3 className="text-xl font-bold mb-3">{card.title}</h3>
-            <p className="text-sm leading-relaxed">{card.description}</p>
+            <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">{card.title}</h3>
+            <p className="text-sm sm:text-base leading-relaxed flex-grow">{card.description}</p>
           </motion.div>
         ))}
       </div>

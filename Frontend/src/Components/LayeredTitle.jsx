@@ -1,16 +1,14 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FaChevronDown } from 'react-icons/fa'
 
 const LayeredTitle = ({
   title = 'REQUEST A QUOTE',
   backgroundOpacity = 0.5,
-  showChevron = true,
   sectionHeight = '200px',
 }) => {
   return (
     <section
-      className={`relative w-full flex items-center justify-center overflow-hidden`}
+      className="relative w-full flex items-center justify-center overflow-hidden"
       style={{ height: sectionHeight }}
     >
       {/* Background Text */}
@@ -19,7 +17,9 @@ const LayeredTitle = ({
         whileInView={{ opacity: backgroundOpacity }}
         viewport={{ once: true }}
         transition={{ duration: 1 }}
-        className="absolute inset-0 flex items-center justify-center text-[120px] md:text-[120px] font-extrabold text-gray-300 uppercase tracking-tight select-none"
+        className="absolute inset-0 flex items-center justify-center text-center 
+                   text-[70px] sm:text-[70px] md:text-[120px] 
+                   font-extrabold text-gray-300 uppercase tracking-tight select-none leading-none"
       >
         {title}
       </motion.h2>
@@ -30,16 +30,11 @@ const LayeredTitle = ({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="relative z-10 text-center"
+        className="relative z-10 text-center px-4"
       >
-        <h2 className="text-4xl md:text-5xl font-extrabold text-black uppercase">
+        <h2 className="text-3xl sm:text-3xl md:text-5xl font-extrabold text-black uppercase">
           {title}
         </h2>
-        {/* {showChevron && (
-          <div className="mt-4 flex justify-center">
-            <FaChevronDown className="text-black text-xl animate-bounce" />
-          </div>
-        )} */}
       </motion.div>
     </section>
   )

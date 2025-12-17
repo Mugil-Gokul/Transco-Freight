@@ -30,7 +30,7 @@ const HomeTestimonial = () => {
   }, [index])
 
   return (
-    <section className="w-full bg-white px-6 md:px-12 py-24">
+    <section className="w-full bg-white px-6 md:px-12 py-10 md:py-24">
       {/* Title */}
       <motion.h2
         initial="hidden"
@@ -38,7 +38,7 @@ const HomeTestimonial = () => {
         viewport={{ once: true }}
         variants={fadeVariants}
         transition={{ duration: 0.5 }}
-        className="text-4xl md:text-6xl font-bold text-black uppercase mb-32 text-center"
+        className="text-2xl sm:text-4xl md:text-6xl font-bold text-black uppercase mb-20 md:mb-32 text-center"
       >
         Testimonials
       </motion.h2>
@@ -62,7 +62,7 @@ const HomeTestimonial = () => {
             animate="animate"
             exit="exit"
             transition={{ duration: 0.6 }}
-            className="text-xl md:text-2xl font-medium text-gray-800 px-6"
+            className="text-xl md:text-2xl font-medium text-gray-800 md:px-6 px-20"
           >
             “{testimonials[index]}”
           </motion.p>
@@ -78,7 +78,7 @@ const HomeTestimonial = () => {
       </div>
 
       {/* Dots */}
-      <div className="flex justify-center mt-40 gap-2">
+      <div className="flex justify-center mt-20 md:mt-40 gap-2">
         {testimonials.map((_, i) => (
           <div
             key={i}
