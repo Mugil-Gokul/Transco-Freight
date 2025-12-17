@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import SmartWayLogo from '../assets/Logo.png' 
+import SmartWayLogo from '../assets/logo.png' 
 
 const footerLinks = [
   { name: 'About', path: '/about' },
