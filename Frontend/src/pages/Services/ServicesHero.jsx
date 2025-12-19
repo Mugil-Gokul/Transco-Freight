@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
-import heroImage from "../../assets/ServiceHeroImg2.png";
+import heroImage from "../../assets/ServiceHeroImg.png";
 import CustomButton from "../../Components/CustomButton";
 
 const ServicesHero = () => {
