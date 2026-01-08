@@ -3,6 +3,7 @@ import AboutHero from './AboutHero'
 import WhoWeAre from './WhoWeAre'
 import NumberAndData from './NumberAndData'
 import AboutInfo from './AboutInfo'
+import AboutTeam from './AboutTeam'
 
 const AboutMain = () => {
   return (
@@ -11,6 +12,7 @@ const AboutMain = () => {
     <WhoWeAre/>
     <NumberAndData/>
     <AboutInfo/>
+    <AboutTeam/>
     </>
   )
 }

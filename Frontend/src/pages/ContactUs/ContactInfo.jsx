@@ -1,5 +1,5 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React from "react";
+import { motion } from "framer-motion";
 
 const ContactInfo = () => {
   return (
@@ -22,12 +22,19 @@ const ContactInfo = () => {
           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             Get in Touch
           </h3>
+          <p className="mb-4">
+            We’d love to hear from you! Whether you have a question, need a
+            quote, or want to stop by, our team is here to help. Feel free to
+            visit us during regular business hours or reach out using the
+            contact details below.
+          </p>
           <p className="text-gray-700 mb-2">
-            Unit 2 – 2798 Thamesgate Drive<br />
+            Unit 2 – 2798 Thamesgate Drive
+            <br />
             Mississauga, Ontario L4T 4E8
           </p>
           <p className="text-gray-700 mb-2">
-            Phone:{' '}
+            Phone:{" "}
             <a
               href="tel:9055141010"
               className="text-[#18357b] hover:underline inline-block"
@@ -36,7 +43,7 @@ const ContactInfo = () => {
             </a>
           </p>
           <p className="text-gray-700">
-            Email:{' '}
+            Email:{" "}
             <a
               href="mailto:info@transcofreight.com"
               className="text-[#18357b] hover:underline inline-block"
@@ -58,7 +65,7 @@ const ContactInfo = () => {
             Safety & Compliance
           </h3>
           <p className="text-gray-700">
-            Email:{' '}
+            Email:{" "}
             <a
               href="mailto:safety@transcofreight.com"
               className="text-[#18357b] hover:underline inline-block"
@@ -69,7 +76,7 @@ const ContactInfo = () => {
         </motion.div>
       </div>
     </motion.section>
-  )
-}
+  );
+};
 
-export default ContactInfo
+export default ContactInfo;

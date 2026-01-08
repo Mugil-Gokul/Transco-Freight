@@ -16,7 +16,7 @@ const AboutHero = () => {
         />
 
         {/* Overlay Layer */}
-        <div className="absolute inset-0 bg-black bg-opacity-30 z-0" />
+        <div className="absolute inset-0 bg-black bg-opacity-40 z-0" />
 
         {/* Overlay Content - bottom left */}
         <div className="relative z-10 h-full flex items-end px-4 sm:px-6 md:px-20 pb-8 sm:pb-12">

@@ -1,78 +1,120 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import CountUp from 'react-countup'
+import React from "react"
+import { motion } from "framer-motion"
+import CountUp from "react-countup"
+import { FaBoxOpen, FaRoute, FaTruck, FaSmile } from "react-icons/fa"
 
 const stats = [
   {
     number: 105396,
-    label: 'DELIVERED PACKAGES',
+    label: "DELIVERED PACKAGES",
     description:
-      'Over the years we have managed to successfully deliver packages from their origin till the final destination in the required amount of time.',
+      "Successfully delivered packages from origin to destination on time.",
+    icon: FaBoxOpen,
+    color: "from-red-500 to-pink-500",
   },
   {
     number: 473739,
-    label: 'KM PER YEAR',
+    label: "KM PER YEAR",
     description:
-      'Every year we travel a certain amount of kilometers to deliver exceptional services to our customers.',
+      "Traveling thousands of kilometers annually to serve our customers.",
+    icon: FaRoute,
+    color: "from-blue-500 to-cyan-400",
   },
   {
     number: 500279,
-    label: 'TONS OF GOODS',
+    label: "TONS OF GOODS",
     description:
-      'At Mitchell Cotts we strive to keep a clear record of the weight of all the goods that pass through our facilities.',
+      "Tracking weight of goods passing through our facilities with precision.",
+    icon: FaTruck,
+    color: "from-green-400 to-lime-400",
   },
   {
     number: 5800,
-    label: 'SATISFIED CLIENTS',
+    label: "SATISFIED CLIENTS",
     description:
-      'We work hard to cater to all the different needs of our clients by giving them tailor made solutions to fit their requests.',
+      "Tailor-made solutions to meet every client’s unique logistics needs.",
+    icon: FaSmile,
+    color: "from-yellow-400 to-orange-400",
   },
 ]
 
 const NumberAndData = () => {
   return (
-    <section className="w-full bg-blue-900 text-white py-16 px-6 md:px-20">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-        {/* Left Side Title */}
+    <section className="relative w-full py-24 px-6 md:px-20 bg-gradient-to-b from-[#0d1a3d] to-[#18357b] overflow-hidden">
+      {/* Background soft shapes */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="flex flex-col justify-start"
-        >
-          <h2 className="text-xl md:text-2xl font-bold uppercase tracking-wide mb-6">
-            NUMBERS AND DATES:
-          </h2>
-          <h3 className="text-2xl md:text-4xl tracking-wider font-semibold">
-            BASE FACTS AND FIGURES
-          </h3>
-        </motion.div>
+          animate={{ x: [-50, 50, -50] }}
+          transition={{ duration: 20, repeat: Infinity }}
+          className="absolute top-10 left-0 w-80 h-80 rounded-full bg-red-500/20 blur-3xl"
+        />
+        <motion.div
+          animate={{ y: [-50, 50, -50] }}
+          transition={{ duration: 25, repeat: Infinity }}
+          className="absolute bottom-20 right-0 w-96 h-96 rounded-full bg-yellow-400/20 blur-3xl"
+        />
+      </div>
 
-        {/* Right Side Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-center">
-          {stats.map((stat, index) => (
+      {/* Heading */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="relative z-10 text-center mb-16"
+      >
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          Numbers That Speak
+        </h2>
+        <p className="text-gray-300 max-w-2xl mx-auto">
+          We believe in transparency, accountability, and delivering measurable results.
+        </p>
+      </motion.div>
+
+      {/* Stats Grid */}
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12">
+        {stats.map((stat, index) => {
+          const Icon = stat.icon
+          return (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="flex flex-col"
+              initial={{ opacity: 0, y: 60, rotateX: 15 }}
+              whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 flex flex-col items-center text-center shadow-xl hover:scale-105 hover:shadow-2xl transition-all duration-500"
             >
-              <h3 className="text-3xl md:text-5xl font-bold text-red-600 mb-2">
+              {/* Icon Circle */}
+              <div
+                className={`w-16 h-16 flex items-center justify-center rounded-full mb-4 bg-gradient-to-tr ${stat.color} text-white text-2xl shadow-lg`}
+              >
+                <Icon />
+              </div>
+
+              {/* Count */}
+              <h3 className="text-4xl md:text-5xl font-bold text-white mb-2 relative">
                 <CountUp
-                  start={1}
+                  start={0}
                   end={stat.number}
                   duration={3}
                   separator=","
                   enableScrollSpy
                   scrollSpyOnce
                 />
+                {/* Glow effect */}
+                <span className="absolute inset-0 bg-gradient-to-r from-white/40 to-white/10 blur-xl rounded-xl mix-blend-overlay" />
               </h3>
-              <p className="text-md font-semibold uppercase mb-2">{stat.label}</p>
-              <p className="text-sm text-gray-200">{stat.description}</p>
+
+              <p className="text-sm md:text-base font-semibold uppercase text-gray-300 mb-2">
+                {stat.label}
+              </p>
+
+              <p className="text-gray-400 text-xs md:text-sm leading-relaxed">
+                {stat.description}
+              </p>
             </motion.div>
-          ))}
-        </div>
+          )
+        })}
       </div>
     </section>
   )

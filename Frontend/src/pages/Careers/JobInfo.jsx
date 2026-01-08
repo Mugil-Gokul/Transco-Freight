@@ -46,7 +46,7 @@ const JobInfo = () => {
             All our live job openings are now available on our dedicated Job Portal.
           </p>
           <CustomButton className="sm:w-auto">
-            <a href="https://truckrighthr.truckright.com/careers" target="_blank" rel="noopener noreferrer">Visit Job Portal</a>
+            <a href="https://transco.truckright.ca/careers" target="_blank" rel="noopener noreferrer">Visit Job Portal</a>
           </CustomButton>
         </motion.div>
       </div>

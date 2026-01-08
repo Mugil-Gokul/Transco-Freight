@@ -151,6 +151,7 @@ const Navbar = () => {
           className="max-w-7xl mx-auto px-4 sm:px-6 py-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
         >
           {/* Big Logo */}
+          <Link to="/">
           <motion.img
             src={Logo}
             alt="Big Logo"
@@ -163,7 +164,8 @@ const Navbar = () => {
             transition={{ duration: 0.8 }}
             className="h-20 sm:h-24 md:h-32 w-auto object-contain mx-auto md:mx-0"
           />
-
+          </Link>
+          
           {/* Right Text */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
