@@ -1,11 +1,11 @@
-import React from "react"
-import { motion } from "framer-motion"
-import CountUp from "react-countup"
-import { FaBoxOpen, FaRoute, FaTruck, FaSmile } from "react-icons/fa"
+import React from "react";
+import { motion } from "framer-motion";
+import CountUp from "react-countup";
+import { FaBoxOpen, FaRoute, FaTruck, FaSmile } from "react-icons/fa";
 
 const stats = [
   {
-    number: 105396,
+    number: 100000,
     label: "DELIVERIES",
     description:
       "Successfully delivered packages from origin to destination on time.",
@@ -13,7 +13,7 @@ const stats = [
     color: "from-red-500 to-pink-500",
   },
   {
-    number: 473739,
+    number: 400000,
     label: "MILES PER YEAR",
     description:
       "Traveling thousands of kilometers annually to serve our customers.",
@@ -21,7 +21,7 @@ const stats = [
     color: "from-blue-500 to-cyan-400",
   },
   {
-    number: 500279,
+    number: 500000,
     label: "TONS OF GOODS",
     description:
       "Tracking weight of goods passing through our facilities with precision.",
@@ -29,14 +29,14 @@ const stats = [
     color: "from-green-400 to-lime-400",
   },
   {
-    number: 5800,
+    number: 5000,
     label: "SATISFIED CLIENTS",
     description:
       "Tailor-made solutions to meet every client’s unique logistics needs.",
     icon: FaSmile,
     color: "from-yellow-400 to-orange-400",
   },
-]
+];
 
 const NumberAndData = () => {
   return (
@@ -67,14 +67,15 @@ const NumberAndData = () => {
           Numbers That Speak
         </h2>
         <p className="text-gray-300 max-w-2xl mx-auto">
-          We believe in transparency, accountability, and delivering measurable results.
+          We believe in transparency, accountability, and delivering measurable
+          results.
         </p>
       </motion.div>
 
       {/* Stats Grid */}
       <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12">
         {stats.map((stat, index) => {
-          const Icon = stat.icon
+          const Icon = stat.icon;
           return (
             <motion.div
               key={index}
@@ -92,7 +93,7 @@ const NumberAndData = () => {
               </div>
 
               {/* Count */}
-              <h3 className="text-4xl md:text-5xl font-bold text-white mb-2 relative">
+              <h3 className="text-4xl md:text-5xl font-bold text-white mb-2 relative text-center flex items-center justify-center gap-1">
                 <CountUp
                   start={0}
                   end={stat.number}
@@ -101,6 +102,7 @@ const NumberAndData = () => {
                   enableScrollSpy
                   scrollSpyOnce
                 />
+                <span className="inline-block text-4xl">+</span>
                 {/* Glow effect */}
                 <span className="absolute inset-0 bg-gradient-to-r from-white/40 to-white/10 blur-xl rounded-xl mix-blend-overlay" />
               </h3>
@@ -113,11 +115,11 @@ const NumberAndData = () => {
                 {stat.description}
               </p>
             </motion.div>
-          )
+          );
         })}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default NumberAndData
+export default NumberAndData;

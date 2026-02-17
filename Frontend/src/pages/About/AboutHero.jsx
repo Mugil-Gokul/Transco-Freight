@@ -65,7 +65,7 @@ const AboutHero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="font-semibold text-red-600 text-sm sm:text-base">
-              WORKING HOURS
+              OFFICE HOURS
             </p>
             <p className="text-xs sm:text-sm">Mon–Sat: 9AM–6PM</p>
           </motion.div>
