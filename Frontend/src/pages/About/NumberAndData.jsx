@@ -6,7 +6,7 @@ import { FaBoxOpen, FaRoute, FaTruck, FaSmile } from "react-icons/fa"
 const stats = [
   {
     number: 105396,
-    label: "DELIVERED PACKAGES",
+    label: "DELIVERIES",
     description:
       "Successfully delivered packages from origin to destination on time.",
     icon: FaBoxOpen,
@@ -14,7 +14,7 @@ const stats = [
   },
   {
     number: 473739,
-    label: "KM PER YEAR",
+    label: "MILES PER YEAR",
     description:
       "Traveling thousands of kilometers annually to serve our customers.",
     icon: FaRoute,

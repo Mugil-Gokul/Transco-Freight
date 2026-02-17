@@ -40,7 +40,7 @@ const FleetHero = () => {
           transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
           className="mt-4 text-lg md:text-xl max-w-xl"
         >
-          From small vans to full trailers, we have the right vehicle for every
+          From cargo Vans to 53' Trailers, we have the right vehicle for every
           shipment.
         </motion.p>
         {/* <CustomButton onClick={handleRequestQuote} className="mt-8">

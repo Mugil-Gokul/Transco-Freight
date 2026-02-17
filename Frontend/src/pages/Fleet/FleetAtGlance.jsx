@@ -7,6 +7,7 @@ import {
   FaCogs
 } from 'react-icons/fa'
 import CustomButton from '../../Components/CustomButton'
+import { Link } from 'react-router-dom'
 
 const fleet = [
   // {
@@ -116,7 +117,9 @@ const FleetAtGlance = () => {
               </h3>
               <p className="text-gray-700 mb-6">{activeTruck.details}</p>
               <CustomButton>
-                Book Now
+                <Link to="/contact">
+                  Book Now
+                </Link>
               </CustomButton>
             </div>
 

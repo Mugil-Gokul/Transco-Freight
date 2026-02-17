@@ -34,13 +34,13 @@ const HomeMain = () => {
       <HomeRequest />
       <HomeAboutUs />
       <HomeServices />
-      <HomeCareers />
+      {/* <HomeCareers /> */}
       <HomeFleetAndEquipment />
       <HomeTestimonial />
-      <HomeBlogAndNews />
-      <section id="request-form">
+      {/* <HomeBlogAndNews /> */}
+      {/* <section id="request-form">
         <RequestAQuote />
-      </section>
+      </section> */}
       <ContactUsForm />
     </>
   );

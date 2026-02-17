@@ -54,9 +54,9 @@ const AboutHero = () => {
             transition={{ duration: 0.6 }}
           >
             <p className="font-semibold text-red-600 text-sm sm:text-base">
-              CALL CENTER
+              OPERATIONAL HOURS
             </p>
-            <p className="text-xs sm:text-sm">Give us a free call</p>
+            <p className="text-xs sm:text-sm">24/7 Service</p>
           </motion.div>
 
           <motion.div
